@@ -1,73 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Weather Forecast</title>
 
-  <!-- Font Awesome Icons -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOYyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
-
-  <!-- Custom Styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <header class="header">
-    <h1 class="header-title">WEATHER FORECAST</h1>
+    <div class="header-inner">
+      <span class="header-badge">SmartFarm Weather</span>
+      <h1 class="header-title">Weather Forecast</h1>
+      <p class="header-subtitle">Search any city and get a clean live snapshot of the weather.</p>
+    </div>
   </header>
 
-  <div class="container">
-    <div class="header-sec">
-      <div class="search-box">
+  <main class="page-shell">
+    <section class="container">
+      <div class="panel-top">
+        <div>
+          <p class="eyebrow">Live conditions</p>
+          <h2 class="panel-title">Forecast dashboard</h2>
+        </div>
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          OpenWeather
+        </div>
+      </div>
+
+      <div class="search-box" role="search" aria-label="Search weather by city">
         <input type="text" placeholder="Enter your location" class="input-box" />
-        <button class="fa-solid fa-magnifying-glass" id="searchBtn"></button>
-      </div>
-    </div>
-
-    <div class="location-not-found">
-      <h1>Sorry, Location not found!!!</h1>
-      <img src="img/404.png" alt="404 Error" />
-    </div>
-
-    <div class="weather-body">
-      <!-- Icon instead of image -->
-      <div class="weather-icon">
-        <i class="fa-solid fa-cloud"></i>
+        <button class="search-btn" id="searchBtn" aria-label="Search weather">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
       </div>
 
-      <div class="weather-box">
-        <p class="temperature">0 <sup>°C</sup></p>
-        <p class="description">light rain</p>
-      </div>
+      <p class="search-hint">Try a city like London, Mumbai, Tokyo, or New York.</p>
 
-      <div class="weather-details">
-        <div class="humidity">
-          <i class="fa-sharp fa-solid fa-droplet"></i>
-          <div class="text">
-            <span id="humidity">45%</span>
-            <p>Humidity</p>
-          </div>
-        </div>
-
-        <div class="wind">
-          <i class="fa-solid fa-wind"></i>
-          <div class="text">
-            <span id="wind-speed">12Km/H</span>
-            <p>Wind Speed</p>
+      <div class="location-not-found">
+        <div class="empty-state-card">
+          <img src="img/404.png" alt="Location not found illustration" />
+          <div>
+            <h1>Location not found</h1>
+            <p>Check the spelling and try another city name.</p>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+
+      <div class="weather-body">
+        <div class="weather-hero">
+          <img class="weather-img" src="img/default.png" alt="Weather condition icon" />
+          <div class="weather-copy">
+            <p class="city-label">Current weather</p>
+            <p class="description">light rain</p>
+          </div>
+        </div>
+
+        <div class="weather-box">
+          <p class="temperature">0<sup>°C</sup></p>
+          <p class="weather-note">Feels crisp and comfortable for most outdoor activities.</p>
+        </div>
+
+        <div class="weather-details">
+          <div class="detail-card humidity">
+            <i class="fa-sharp fa-solid fa-droplet"></i>
+            <div class="text">
+              <span id="humidity">45%</span>
+              <p>Humidity</p>
+            </div>
+          </div>
+
+          <div class="detail-card wind">
+            <i class="fa-solid fa-wind"></i>
+            <div class="text">
+              <span id="wind-speed">12 Km/H</span>
+              <p>Wind Speed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer class="footer">
     <p class="footer-text">© Copyright – All Rights Reserved Team Smartfarm</p>
@@ -76,13 +99,4 @@
   <script src="script.js"></script>
   <script src="https://kit.fontawesome.com/595a890311.js" crossorigin="anonymous"></script>
 </body>
-
 </html>
-
-
-
-
-
-
-
- 

@@ -4,3 +4,4 @@
 # Python
 __pycache__/
 *.pyc
+!PLANT-DISEASE-IDENTIFICATION/trained_plant_disease_model.keras

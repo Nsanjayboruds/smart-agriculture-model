@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartFarm — Your Smart Farming Assistant</title>
+    <meta name="description" content="SmartFarm provides AI-powered crop recommendations, plant disease identification, weather forecasts, and smart farming guidance for modern agriculture." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-auth-compat.js"></script>
+    <script src="js/firebaseConfig.js"></script>
+  </head>
+
+  <body>
+    <!-- ═══════════ NAVBAR ═══════════ -->
+    <header class="header" id="header">
+      <div class="logo">
+        <span class="logo-icon">🌾</span>
+        <h1>Smart<span>Farm</span></h1>
+      </div>
+
+      <nav class="navbar" id="navbar">
+        <a href="#home">Home</a>
+        <a href="#features">Features</a>
+        <a href="#services">Services</a>
+        <a href="#footer">Contact</a>
+        <a href="explore/index.html" class="nav-cta">Explore Now <i class="fas fa-arrow-right"></i></a>
+      </nav>
+
+      <div class="menu-toggle" id="menu-btn">
+        <span></span><span></span><span></span>
+      </div>
+    </header>
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="hero-particles" id="particles"></div>
+      <div class="hero-content">
+        <div class="hero-badge">🌱 AI-Powered Agriculture Platform</div>
+        <h1>Your Smart<br/><span class="gradient-text">Farming Assistant</span></h1>
+        <p>Harness the power of machine learning for smarter crop decisions, instant disease detection, and precision farming guidance.</p>
+        <div class="hero-actions">
+          <a href="#services" class="btn-primary">
+            <span>Get Started</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="guide/index.html" class="btn-secondary" target="_blank">
+            <i class="fas fa-book-open"></i>
+            <span>Farming Guide</span>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <strong>22+</strong>
+            <span>Crop Types</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>38+</strong>
+            <span>Diseases Detected</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <strong>95%</strong>
+            <span>Accuracy</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <a href="#features"><i class="fas fa-chevron-down"></i></a>
+      </div>
+    </section>
+
+    <!-- ═══════════ FEATURES ═══════════ -->
+    <section class="features" id="features">
+      <div class="section-header">
+        <span class="section-tag">What We Offer</span>
+        <h2>Powerful Features for <span class="gradient-text">Modern Farming</span></h2>
+        <p>SmartFarm combines AI, real-time data, and agricultural science to deliver actionable insights for every stage of your farming journey.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon" style="--accent: #22c55e;">
+            <i class="fas fa-seedling"></i>
+          </div>
+          <h3>Crop Recommendation</h3>
+          <p>AI-powered crop predictions based on soil nutrients, weather conditions, and regional data.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="--accent: #ef4444;">
+            <i class="fas fa-microscope"></i>
+          </div>
+          <h3>Disease Detection</h3>
+          <p>Upload a leaf photo and instantly identify plant diseases using deep learning models.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="--accent: #3b82f6;">
+            <i class="fas fa-cloud-sun"></i>
+          </div>
+          <h3>Weather Forecast</h3>
+          <p>Real-time weather insights on temperature, humidity, and rainfall for precision planning.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="--accent: #f59e0b;">
+            <i class="fas fa-flask"></i>
+          </div>
+          <h3>Fertilizer Guide</h3>
+          <p>Get optimal fertilizer recommendations tailored to your soil type and crop selection.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ SERVICES / TOOLS ═══════════ -->
+    <section class="services" id="services">
+      <div class="section-header">
+        <span class="section-tag">Our Tools</span>
+        <h2>Try Our <span class="gradient-text">Smart Tools</span></h2>
+        <p>Access our AI-powered services directly — click any tool below to launch it.</p>
+      </div>
+
+      <div class="services-buttons">
+        <a href="http://localhost:8501" target="_blank" class="service-btn">
+          <i class="fas fa-seedling"></i>
+          <span>Crop Recommendations</span>
+        </a>
+        <a href="http://localhost:8502" target="_blank" class="service-btn">
+          <i class="fas fa-microscope"></i>
+          <span>Identify Plant Diseases</span>
+        </a>
+        <a href="http://localhost:8503" target="_blank" class="service-btn">
+          <i class="fas fa-flask"></i>
+          <span>Fertilizer Recommendation</span>
+        </a>
+        <a href="weather-forecast/index.html" class="service-btn">
+          <i class="fas fa-cloud-sun"></i>
+          <span>Weather Forecast</span>
+        </a>
+        <a href="guide/index.html" class="service-btn">
+          <i class="fas fa-book-open"></i>
+          <span>Smart Farming Guide</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- ═══════════ SHOWCASE ROWS ═══════════ -->
+    <section class="showcase" id="showcase">
+
+      <!-- Row 1 — Video -->
+      <div class="showcase-row">
+        <div class="showcase-media">
+          <video src="images/farm.mp4" autoplay muted loop playsinline></video>
+        </div>
+        <div class="showcase-content">
+          <span class="showcase-tag">🌤️ Weather Intelligence</span>
+          <h2>Real-Time Weather Forecast</h2>
+          <p>Plan your farming with precision! Check real-time weather insights on temperature, humidity, and more. Integrated with our crop-prediction model for optimal decisions.</p>
+          <a href="weather-forecast/index.html" class="showcase-link">
+            <span>Check Weather</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="showcase-row reverse">
+        <div class="showcase-media">
+          <img src="images/mean.jpg" alt="Smart Crop Planning" />
+        </div>
+        <div class="showcase-content">
+          <span class="showcase-tag">🌾 AI Predictions</span>
+          <h2>Smart Crop Planning</h2>
+          <p>Harness the power of data analysis to predict crop suitability, providing insights into optimal cultivation conditions. SmartFarm optimizes farming decisions based on soil quality, weather, and more.</p>
+          <a href="http://localhost:8501" target="_blank" class="showcase-link">
+            <span>Try Crop Planner</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="showcase-row">
+        <div class="showcase-media">
+          <img src="images/green.jpg" alt="Disease Detection" />
+        </div>
+        <div class="showcase-content">
+          <span class="showcase-tag">🔬 Deep Learning</span>
+          <h2>Plant Disease Identification</h2>
+          <p>Assist farmers in detecting plant diseases by enabling image uploads, utilizing deep learning for prompt and precise identification, enhancing farming efficiency and crop management.</p>
+          <a href="http://localhost:8502" target="_blank" class="showcase-link">
+            <span>Detect Disease</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Row 4 -->
+      <div class="showcase-row reverse">
+        <div class="showcase-media">
+          <img src="images/sustain.jpg" alt="Farming Guidance" />
+        </div>
+        <div class="showcase-content">
+          <span class="showcase-tag">📖 Expert Guidance</span>
+          <h2>Smart Farming, Simple Guidance</h2>
+          <p>Get step-by-step crop growing plans, expert planting tips, growth tracking, watering reminders, pest control advice, and harvest timing — all in one place.</p>
+          <a href="guide/index.html" class="showcase-link">
+            <span>Open Guide</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Row 5 -->
+      <div class="showcase-row">
+        <div class="showcase-media">
+          <img src="images/Deforestation.jpg" alt="Modern Farming" />
+        </div>
+        <div class="showcase-content">
+          <span class="showcase-tag">🚀 Innovation</span>
+          <h2>Innovations for Modern Farms</h2>
+          <p>Smart crop tech, precision farming, and customizable solutions for sustainable and efficient agriculture. The future of farming starts here.</p>
+          <a href="#features" class="showcase-link">
+            <span>Learn More</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Row 6 -->
+      <div class="showcase-row reverse">
+        <div class="showcase-media">
+          <img src="images/hand.jpg" alt="User Friendly Interface" />
+        </div>
+        <div class="showcase-content">
+          <span class="showcase-tag">✨ Easy to Use</span>
+          <h2>User-Friendly Interface</h2>
+          <p>Designed for farmers of all technological backgrounds. Simple inputs like location and crop selection give you detailed crop suitability and planting schedules instantly.</p>
+          <a href="explore/index.html" class="showcase-link">
+            <span>Explore App</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer" id="footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-icon">🌾</span>
+            <h2>Smart<span>Farm</span></h2>
+          </div>
+          <p>Empowering farmers with AI-driven tools for smarter, sustainable, and more productive agriculture.</p>
+          <div class="footer-socials">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-links-group">
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#services">Services</a>
+          </div>
+
+          <div class="footer-col">
+            <h4>Tools</h4>
+            <a href="http://localhost:8501" target="_blank">Crop Recommendation</a>
+            <a href="http://localhost:8502" target="_blank">Disease Detection</a>
+            <a href="http://localhost:8503" target="_blank">Fertilizer Guide</a>
+          </div>
+
+          <div class="footer-col">
+            <h4>Resources</h4>
+            <a href="guide/index.html">Farming Guide</a>
+            <a href="weather-forecast/index.html">Weather Forecast</a>
+            <a href="#">FAQs</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 SmartFarm — All Rights Reserved. Built by <a href="#">Team SmartFarm</a></p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

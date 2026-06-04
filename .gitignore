@@ -1,0 +1,32 @@
+requirements.txt
+*.pyc
+__pycache__/
+*.log
+.env
+venv/
+.idea/
+.DS_Store   
+*.keras
+*.h5# Python
+__pycache__/
+*.pyc
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# ML Models
+*.h5
+*.keras
+
+# Logs
+*.log
+
+# OS Files
+.DS_Store
+node_modules/
+dist/
+build/
+*.log
+*.env

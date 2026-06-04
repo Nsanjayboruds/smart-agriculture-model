@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+from pathlib import Path
 import os
 import pickle
 from sklearn.ensemble import RandomForestClassifier
@@ -11,7 +12,10 @@ st.title("🌿 Fertilizer Recommendation System")
 # Load CSV and preprocess
 @st.cache_data
 def load_data():
-    df = pd.read_csv("fertilizer_data.csv")
+    BASE_DIR = Path(__file__).resolve().parent
+    csv_path = BASE_DIR / "fertilizer_data.csv"
+
+    df = pd.read_csv(csv_path)
     df.columns = df.columns.str.strip().str.lower().str.replace(" ", "_")
     return df
 

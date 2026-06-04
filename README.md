@@ -19,32 +19,7 @@
 
 ---
 
-## 📸 Screenshots
 
-<table>
-  <tr>
-    <td width="50%">
-      <strong>🏠 Landing Page</strong><br/>
-      Modern, professional UI with glassmorphism navbar, cinematic hero section, and scroll-reveal animations.
-    </td>
-    <td width="50%">
-      <strong>🌾 Crop Recommendation</strong><br/>
-      Clean Streamlit UI for AI-powered crop predictions based on soil and weather inputs.
-    </td>
-  </tr>
-  <tr>
-    <td width="50%">
-      <strong>🔬 Disease Detection</strong><br/>
-      Upload leaf images and get instant disease identification using CNN deep learning.
-    </td>
-    <td width="50%">
-      <strong>🧪 Fertilizer Guide</strong><br/>
-      Smart fertilizer recommendations based on soil type, crop, and nutrient levels.
-    </td>
-  </tr>
-</table>
-
----
 
 ## ✨ Features
 
